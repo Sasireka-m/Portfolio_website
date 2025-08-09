@@ -1,0 +1,391 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #1f2937;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00bcd4;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+  color: white;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+/* Section Base */
+section {
+  padding: 100px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+/* About Section */
+#about {
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 120px;
+}
+
+#about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* Skills Section (Shared) */
+#technical-skills,
+#soft-skills {
+  background-color: #f9f9f9;
+}
+#soft-skills {
+  background-color: #f9f9f9;
+  padding-top: 60px;
+  margin-top: -30px;
+}
+
+#technical-skills{
+  padding-top: 40px;
+  margin-top: -30px;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+}
+
+.skill-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.skill-box:hover {
+  transform: scale(1.08);
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+/* Projects */
+#projects {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+/* Education */
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.education-box:hover {
+  transform: scale(1.02);
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.education-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+.education-box p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+/* Contact */
+#contact {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
+#contact p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+#contact a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* Scroll padding */
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 150px;
+    background-color: #1f2937;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Certifications Section */
+#certifications {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.certifications-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.certification-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.certification-box:hover {
+  transform: scale(1.02);
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.certification-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+.certification-box p {
+  font-size: 1rem;
+  margin-top: 4px;
+}
+#achievements {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+#achievements h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.achievement-card:hover {
+  transform: scale(1.02);
+  background-color: #e0f7fa;
+  color: #00796b;
+}
